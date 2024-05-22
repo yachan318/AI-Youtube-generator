@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AI blog Generator </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"rel="stylesheet"></link>
+    
+    <style>
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to { 
+                transform: rotate(360deg);
+            }
+        }
+         
+        
+         @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to { 
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        .load {
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border:solid 10px #e40d0ddf;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+             -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name:             rotate; 
+            -webkit-animation-duration:         1.0s; 
+            -webkit-animation-iteration-count:  infinite;
+            -webkit-animation-timing-function: linear;
+                
+                 transition: all 0.5s ease-in;
+            animation-name:             rotate; 
+            animation-duration:         1.0s; 
+            animation-iteration-count:  infinite;
+            animation-timing-function: linear; 
+        }
+    </style>
+</head>
+<body class = "flex flex-col min-h-scrren bg-gray-100 font-sans antialised">
+    <nav class ="bg-black p-4 text-red-600 flex justify-between">
+        <div>
+            <h1 class = "text-3xl font-bold"> AI Blog Generator </h1>
+            <div>
+                <a href = "#" class = "text-white hover:underline"> Logout</a>
+            </div>
+
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="flex-grow container mx-auto mt-10">
+        <div class="max-w-3xl mx-auto bg-black p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex flex-col">
+
+            <div  class="text-center">
+               <h2 class="text-2xl text-white font-semibold mb-4.5 sm:px-0">
+                Welcome to AI generator 
+               </h2> 
+               <p class="text-white text-400">
+                Sinplely enter the link to the YouTube video below and let AI generator create the content for you!! 
+               </p>
+            </div>
+
+            <br>
+            <div>
+                <h2 class="text-xl text-white text-400 mb-4 font-semibold">Enter YouTube Video Link</h2>
+                <div class="flex space-x-4">
+                    <input id="youtubeLink" type="url" placeholder =" Paste Youtube Link" class="flex-grow p-2 border border-red-500 rounded-l-md">
+                    <button id="generateBlogButtom"  class="bg-red-600 text-white px-4 py-2 rounded-r-md hover:bg-green-700 transition-color"> Generate </button>
+
+                </div>
+            </div>
+            <div style="display: block;" ="loading-circle" class="load ">
+
+            </div>
+
+
+            
+
+        <section class="mt-10 flex-grow">
+            <h2 class="text-white text-xl  mb-4 font-semibold"> Generated Blog Article </h2>
+            <div id="blogContent" class="mt-2 text-green-700 space-y-4">
+                kdjkjjf
+            </div>
+        </section>
+        </div>
+
+    </div>
+    <footer class="text-center p-4 text-blacl mt-1">
+        Powered By <a> Amber.L</a>
+    </footer>
+
+</body>
+</html>
